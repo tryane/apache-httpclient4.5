@@ -30,6 +30,7 @@
     <artifactId>httpcomponents-client</artifactId>
     <version>4.5.7</version>
   </parent>
+  <version>4.5.7.NTLMPATCH</version>
   <artifactId>httpclient</artifactId>
   <name>Apache HttpClient</name>
   <description>
@@ -91,25 +92,6 @@
               <sources>
                 <source>src/main/java-deprecated</source>
               </sources>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>com.googlecode.maven-download-plugin</groupId>
-        <artifactId>download-maven-plugin</artifactId>
-        <version>1.2.1</version>
-        <executions>
-          <execution>
-            <id>download-public-suffix-list</id>
-            <phase>generate-sources</phase>
-            <goals>
-              <goal>wget</goal>
-            </goals>
-            <configuration>
-              <url>https://publicsuffix.org/list/effective_tld_names.dat</url>
-              <outputDirectory>${project.build.outputDirectory}/mozilla</outputDirectory>
-              <outputFileName>public-suffix-list.txt</outputFileName>
             </configuration>
           </execution>
         </executions>
